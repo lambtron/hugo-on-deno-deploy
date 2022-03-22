@@ -21,7 +21,7 @@ jobs:
     permissions:
       id-token: write # Needed to allow the GitHub Action to authenticate with Deno Deploy.
       contents: read # Needed to clone the repository.
-      
+
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
@@ -36,9 +36,9 @@ jobs:
 
       - name: Build site
         run: hugo --minify
-        
+
       - name: Deploy to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: hugo-on-deploy # the name of the project on Deno Deploy
-          entrypoint: public/index.html # the entrypoint to deploy
+          entrypoint: main.ts # the entrypoint to deploy
