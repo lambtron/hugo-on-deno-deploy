@@ -38,5 +38,5 @@ jobs:
       - name: Deploy to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: hugo-on-deploy # the name of the project on Deno Deploy
+          project: hugo-on-deno-deploy # the name of the project on Deno Deploy
           entrypoint: https://deno.land/std@0.131.0/http/file_server.ts public
