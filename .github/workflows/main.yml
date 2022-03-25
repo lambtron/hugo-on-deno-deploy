@@ -39,4 +39,4 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: hugo-on-deploy # the name of the project on Deno Deploy
-          entrypoint: deno run -A https://deno.land/std@0.131.0/http/file_server.ts public
+          entrypoint: https://deno.land/std@0.131.0/http/file_server.ts public
